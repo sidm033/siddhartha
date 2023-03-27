@@ -92,10 +92,12 @@ nav {
     display: flex;
     justify-content: center;
     margin-left: 27px;
-    border-color: #146C94;
-    background-color: #146C94;
+    /* border-color: #146C94; */
+    /* background-color: #146C94; */
     border-radius: 11px;
     color: #ffff;
+    background-image:  linear-gradient(-225deg, #ffffff 0%, #dbb8ff 29%, #ff1361 67%, #fff800 100%);
+    background-size: auto auto;
 }
 
 p.about-version {
@@ -259,12 +261,12 @@ p.content-title {
     cursor: pointer;
 }
 
-.animate-charcter {
+.content-icon {
     /* text-transform: uppercase; */
     background-image:  linear-gradient(-225deg, #ffffff 0%, #dbb8ff 29%, #ff1361 67%, #fff800 100%);
     background-size: auto auto;
     background-clip: border-box;
-    background-size: 100% auto;
+    background-size: 200% auto;
     color: #fff;
     /* background-clip: text; */
     /* text-fill-color: transparent; */
@@ -272,7 +274,22 @@ p.content-title {
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
     display: inline-block;
-    font-size: 21px;
+    /* font-size: 21px; */
+}
+
+.animate-charcter {
+    /* text-transform: uppercase; */
+    background-image:  linear-gradient(90deg, #dbaeeb, #cad67a);
+    background-size: auto auto;
+    background-clip: border-box;
+    color: #fff;
+    /* background-clip: text; */
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    /* font-size: 21px; */
 }
 
 @keyframes textclip {
