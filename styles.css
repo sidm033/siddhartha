@@ -122,6 +122,7 @@ footer.footer {
     align-items: center;
     justify-content: center;
     color: white;
+    margin: -1px;
 }
 
 .copy-write {
