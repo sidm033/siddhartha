@@ -1,9 +1,5 @@
 body {
-    /* background-color: #ecf0f1;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 16px;
-    padding-top: 330px;
-    @include transition(padding-top .5s ease); */
+    margin: 0;
 }
 
 .content {
