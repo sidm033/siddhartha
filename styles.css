@@ -97,6 +97,7 @@ nav {
     border-radius: 11px;
     color: #ffff;
 /*     background-image:  linear-gradient(-225deg, #ffffff 0%, #dbb8ff 29%, #ff1361 67%, #fff800 100%); */
+    background-color: #155d64;
     background-size: auto auto;
 }
 
@@ -238,10 +239,7 @@ footer.footer {
 img.content-icon-image {
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
-}
-img.content-icon-image {
-    -webkit-animation: mover 1s infinite  alternate;
-    animation: mover 1s infinite  alternate;
+    border-radius: 12px;
 }
 
 @-webkit-keyframes mover {
@@ -289,6 +287,7 @@ p.content-title {
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
     display: inline-block;
+    background-color: #ffffff;
     /* font-size: 21px; */
 }
 
