@@ -5,155 +5,579 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Siddhartha Mukherjee — Senior Full Stack & AI Developer with 8+ years of experience. IIT Roorkee PG in AI/ML.">
+    <meta name="author" content="Siddhartha Mukherjee">
     <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Siddhartha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Siddhartha Mukherjee | Senior Full Stack & AI Developer</title>
 </head>
 
 <body>
-    <div>
-        <header class="header" id="home">
-            <nav>
-                <a href="#home" class="header-link">Home</a>
-                <a href="#experience" class="header-link">Experience</a>
-                <a href="#contact-us" class="header-link">Contact</a>
-            </nav>
-        </header>
-        <div class="content">
-            <div class="content-text animate-charcter">
-                Hi, I'm Siddhartha Mukherjee. Working in the IT industry can be both challenging and rewarding, and
-                after seven years in the field, I've gained valuable experience that I would like to share this with others who might be interested,
-                they are just getting started. Throughout this portal, I shared my professional experience.
-            </div>
-            <div class="content-image" >
-                <a  class="content-icon" href="https://bit.ly/3z3wOix" target="_blank" >
-                    <img class="content-icon-image" src="./image/stackoverflow.png" alt="stackoverflow.png">
-                </a>
-                <p class="content-title">
-                    <a  class="content-icon" href="https://bit.ly/3z3wOix" target="_blank" >
-                        People reached <strong>6.4m</strong>
-                    </a> 
-                </p>
-            </div>
-        </div>
-        <div class="about" id="experience">
-            <h1 class="about-title"> Experience </h1>
-            <div class="about-content">
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/angular.png" alt="Angular" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 2 - 14
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/nodejs.webp" alt="Node js" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 12 - 14
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/python.png" alt="Python" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 3
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/python-django.png" alt="Django" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 2.7
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/react-js.avif" alt="React js" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 18.2.0
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/react-native.avif" alt="React Native" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 0.70
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/ionic-new.png" alt="Ionic" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 2 - 6
-                        </p>
-                    </div>
-                </div>
-                <div class="about-body-content cotent-angular">
-                    <div>
-                        <img class="angular-img" src="image/experience/html-css.jpeg" alt="Html & Css" />
-                    </div>
-                    <div class="about-content-sub-title">
-                        <p class="about-version">
-                            Version: 5
-                        </p>
-                    </div>
-                </div>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
 
+    <!-- Header -->
+    <header class="header" id="home">
+        <nav>
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SM<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="header-link" onclick="closeNav()">Home</a>
+                <a href="#about" class="header-link" onclick="closeNav()">About</a>
+                <a href="#skills" class="header-link" onclick="closeNav()">Skills</a>
+                <a href="#experience" class="header-link" onclick="closeNav()">Experience</a>
+                <a href="#projects" class="header-link" onclick="closeNav()">Projects</a>
+                <a href="#education" class="header-link" onclick="closeNav()">Education</a>
+                <a href="#contact-us" class="header-link" onclick="closeNav()">Contact</a>
+            </div>
+            <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-animation">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span> Available for opportunities
+            </div>
+            <p class="hero-greeting animate-on-scroll">Hello, I'm</p>
+            <h1 class="hero-name animate-on-scroll">
+                Siddhartha<br>
+                <span class="gradient-text">Mukherjee</span>
+            </h1>
+            <div class="hero-typing">
+                <span class="typing-prefix">I build </span>
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-summary animate-on-scroll">
+                Senior Full Stack & AI Developer with 8+ years of expertise. IIT Roorkee PG in AI & ML.
+                Building scalable applications with Angular, React, Node.js, and cutting-edge AI tools.
+            </p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#contact-us" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                </a>
+                <a href="#projects" class="btn btn-glass">
+                    <i class="fa-solid fa-rocket"></i> View Projects
+                </a>
+            </div>
+            <div class="hero-stats animate-on-scroll">
+                <a href="https://bit.ly/3z3wOix" target="_blank" class="stat-card">
+                    <div class="stat-icon"><i class="fa-brands fa-stack-overflow"></i></div>
+                    <span class="stat-number" data-count="6400000">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">People Reached</span>
+                </a>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Major Projects</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-brain"></i></div>
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">AI Tools Mastered</span>
+                </div>
             </div>
         </div>
-        <div class="contact-us" id="contact-us">
-            <h1 class="contact-us-title"> Contact </h1>
-            <div class="contact-us-content">
-                <div class="contact-name">
-                    <p>Name:</p> <strong> Siddhartha Mukherjee</strong>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p>
+                        I'm a <strong>Senior Full Stack & AI Developer</strong> based in Kolkata, India, with over 8 years
+                        of hands-on experience building scalable web and mobile applications. I hold a
+                        <strong>Post Graduate certification in AI & Machine Learning from IIT Roorkee</strong>.
+                    </p>
+                    <p>
+                        I specialize in modern JavaScript frameworks like Angular, React, and Node.js, and
+                        leverage AI tools like <strong>Claude API, Cursor, and Gemini CLI</strong> for rapid
+                        AI-assisted development. Currently at Black Coat Technologies, I architect secure,
+                        high-performance APIs and full-stack solutions.
+                    </p>
                 </div>
-                <div class="contact-email">
-                    <p> Email: </p> <strong> siddhartham033@gmail.com</strong>
-                </div>
-                <div class="contact-social">
-                    <p> Social: </p> 
-                    <div class="social-icon">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="https://twitter.com/siddhartham94"  target="_blank" class="fa fa-twitter"></a>
-                        <!-- <a href="#" class="fa fa-google"></a> -->
-                        <a href="https://in.linkedin.com/in/siddhartha-mukherjee-231a0b143" target="_blank" class="fa fa-linkedin"></a>
-                        <a href="https://bit.ly/3z0QuUn" target="_blank" class="fa fa-youtube"></a>
-                        <a href="https://www.instagram.com/sidmukharjee/" target="_blank" class="fa fa-instagram"></a>
-                        <a href="https://bit.ly/3z3wOix" target="_blank" class="fa fa-stack-overflow"></a>
+                <div class="about-cards animate-on-scroll">
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Kolkata, India</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-building"></i>
+                        <div>
+                            <span class="info-label">Company</span>
+                            <span class="info-value">Black Coat Technologies</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <span class="info-label">Certification</span>
+                            <span class="info-value">IIT Roorkee — PG in AI/ML</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-language"></i>
+                        <div>
+                            <span class="info-label">Languages</span>
+                            <span class="info-value">English, Hindi, Bengali</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <footer class="footer">
-            <div>
-                <!-- <img class="copy-write" src="./copy-write-img.png" alt="copy-write"> -->
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="title-number">02.</span> Skills & Technologies
+            </h2>
+
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll" style="--delay: 0">
+                    <div class="skill-icon-wrap"><i class="fa-solid fa-display"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Angular (2-14)</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Ionic 3</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll" style="--delay: 1">
+                    <div class="skill-icon-wrap"><i class="fa-solid fa-server"></i></div>
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Sequelize</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll" style="--delay: 2">
+                    <div class="skill-icon-wrap"><i class="fa-solid fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll" style="--delay: 3">
+                    <div class="skill-icon-wrap"><i class="fa-solid fa-cloud"></i></div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Elastic Search</span>
+                    </div>
+                </div>
+                <div class="skill-category ai-highlight animate-on-scroll" style="--delay: 4">
+                    <div class="skill-icon-wrap ai-glow"><i class="fa-solid fa-robot"></i></div>
+                    <h3>AI & ML Development</h3>
+                    <span class="ai-badge">IIT Roorkee Certified</span>
+                    <div class="skill-tags">
+                        <span class="skill-tag tag-ai">Claude API</span>
+                        <span class="skill-tag tag-ai">Cursor</span>
+                        <span class="skill-tag tag-ai">Gemini CLI</span>
+                        <span class="skill-tag tag-ai">Prompt Engineering</span>
+                        <span class="skill-tag tag-ai">AI Model Integration</span>
+                        <span class="skill-tag tag-ai">ML Workflows</span>
+                    </div>
+                </div>
             </div>
-            <p> &copy; Siddhartha Mukherjee </p>
-        </footer>
-    </div>
+
+            <h3 class="tech-stack-heading animate-on-scroll">Tech Stack</h3>
+            <div class="tech-logos animate-on-scroll">
+                <div class="tech-logo-item">
+                    <img src="image/experience/angular.png" alt="Angular" />
+                    <span>Angular</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/nodejs.webp" alt="Node.js" />
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/python.png" alt="Python" />
+                    <span>Python</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/python-django.png" alt="Django" />
+                    <span>Django</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/react-js.avif" alt="React" />
+                    <span>React</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/react-native.avif" alt="React Native" />
+                    <span>React Native</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/ionic-new.png" alt="Ionic" />
+                    <span>Ionic</span>
+                </div>
+                <div class="tech-logo-item">
+                    <img src="image/experience/html-css.jpeg" alt="HTML & CSS" />
+                    <span>HTML & CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="title-number">03.</span> Work Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot pulse"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Current</div>
+                        <h3>Senior Full Stack / Backend Developer</h3>
+                        <span class="timeline-company">
+                            <i class="fa-solid fa-building"></i> Black Coat Technologies Pvt. Ltd.
+                        </span>
+                        <span class="timeline-date">
+                            <i class="fa-regular fa-calendar"></i> September 2019 - Present
+                        </span>
+                        <ul class="timeline-list">
+                            <li>Designed and implemented scalable RESTful APIs for seamless integration across web and mobile applications.</li>
+                            <li>Architected secure, high-performance API endpoints with focus on scalability and maintainability.</li>
+                            <li>Collaborated with cross-functional teams including product managers, designers, and QA engineers.</li>
+                            <li>Performed code reviews, enforced clean architecture principles, and mentored team members.</li>
+                            <li>Implemented backend services using Node.js with PostgreSQL, MySQL, MongoDB, and Redis.</li>
+                            <li>Managed AWS services, Docker, and CI/CD pipelines for automated deployment.</li>
+                            <li>Integrated AI/ML capabilities using Claude API, Cursor, and Gemini CLI.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <span class="timeline-company">
+                            <i class="fa-solid fa-building"></i> WRC Technologies Pvt. Ltd.
+                        </span>
+                        <span class="timeline-date">
+                            <i class="fa-regular fa-calendar"></i> February 2017 - August 2019
+                        </span>
+                        <ul class="timeline-list">
+                            <li>Developed mobile applications using Ionic 3 and React Native.</li>
+                            <li>Contributed to backend services using Python/Django and Node.js/Express.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="title-number">04.</span> Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll" style="--delay: 0">
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">01</div>
+                    <div class="project-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Astro360</h3>
+                    <p class="project-subtitle">Astrology Platform</p>
+                    <p class="project-desc">Live chat with astrologers, purchase minutes, check Rasi and generate Kundli. Full-featured astrology platform.</p>
+                    <div class="project-tech">
+                        <span>Angular 12</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll" style="--delay: 1">
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">02</div>
+                    <div class="project-icon"><i class="fa-solid fa-gavel"></i></div>
+                    <h3>PSL Advance Concept</h3>
+                    <p class="project-subtitle">Lawyer Management System</p>
+                    <p class="project-desc">Complete system for managing clients, cases, and creating/sending invoices. Web and mobile apps.</p>
+                    <div class="project-tech">
+                        <span>Angular 14</span>
+                        <span>Node.js</span>
+                        <span>Ionic 3</span>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll" style="--delay: 2">
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">03</div>
+                    <div class="project-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Legalkart</h3>
+                    <p class="project-subtitle">Lawyer-Client Communication</p>
+                    <p class="project-desc">Multi-platform apps for video/audio calls, scheduling, case assignment and management between lawyers and clients.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Angular</span>
+                        <span>React Native</span>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll" style="--delay: 3">
+                    <div class="project-card-glow"></div>
+                    <div class="project-number">04</div>
+                    <div class="project-icon"><i class="fa-solid fa-spider"></i></div>
+                    <h3>Web Scraping Suite</h3>
+                    <p class="project-subtitle">Python Automation</p>
+                    <p class="project-desc">Advanced web scraping with CAPTCHA resolution including bot and image/text CAPTCHA using OCR technology.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>OCR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">
+                <span class="title-number">05.</span> Education & Certifications
+            </h2>
+            <div class="education-grid">
+                <div class="education-card featured animate-on-scroll">
+                    <div class="edu-ribbon">IIT Certified</div>
+                    <div class="education-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Post Graduate Program in AI & Machine Learning</h3>
+                        <p class="education-school"><i class="fa-solid fa-university"></i> IIT Roorkee</p>
+                        <p class="education-desc">Advanced coursework in Artificial Intelligence, Machine Learning, Deep Learning, NLP, and AI model deployment.</p>
+                        <div class="edu-tags">
+                            <span>AI</span>
+                            <span>Machine Learning</span>
+                            <span>Deep Learning</span>
+                            <span>NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card animate-on-scroll">
+                    <div class="education-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>B.Tech in Computer Science & Engineering</h3>
+                        <p class="education-school"><i class="fa-solid fa-university"></i> Narula Institute of Technologies</p>
+                        <p class="education-date">2014 - 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-us">
+        <div class="container">
+            <h2 class="section-title light animate-on-scroll">
+                <span class="title-number">06.</span> Get in Touch
+            </h2>
+            <p class="contact-intro animate-on-scroll">
+                I'm currently open to new opportunities and collaborations.
+                Whether you have a project in mind or just want to connect, feel free to reach out!
+            </p>
+            <div class="contact-grid">
+                <a href="mailto:siddhartham94@gmail.com" class="contact-card animate-on-scroll" style="--delay: 0">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <span>siddhartham94@gmail.com</span>
+                </a>
+                <a href="tel:+919874440732" class="contact-card animate-on-scroll" style="--delay: 1">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Phone</h3>
+                    <span>(+91) 9874440732</span>
+                </a>
+                <div class="contact-card animate-on-scroll" style="--delay: 2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Location</h3>
+                    <span>Kolkata, West Bengal, India</span>
+                </div>
+            </div>
+            <div class="social-links animate-on-scroll">
+                <a href="https://github.com/S-iddhartham" target="_blank" class="social-btn" data-tooltip="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/siddhartha-mukherjee-231a0b143" target="_blank" class="social-btn" data-tooltip="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://bit.ly/3z3wOix" target="_blank" class="social-btn" data-tooltip="StackOverflow">
+                    <i class="fa-brands fa-stack-overflow"></i>
+                </a>
+                <a href="https://twitter.com/siddhartham94" target="_blank" class="social-btn" data-tooltip="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://bit.ly/3z0QuUn" target="_blank" class="social-btn" data-tooltip="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/sidmukharjee/" target="_blank" class="social-btn" data-tooltip="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by <strong>Siddhartha Mukherjee</strong></p>
+            <p class="footer-sub">&copy; 2026 &middot; All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typing animation
+        const phrases = [
+            'Scalable Web Apps',
+            'AI-Powered Solutions',
+            'RESTful APIs',
+            'Mobile Applications',
+            'Cloud Infrastructure'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingEl = document.getElementById('typingText');
+
+        function typeEffect() {
+            const current = phrases[phraseIndex];
+            if (isDeleting) {
+                typingEl.textContent = current.substring(0, charIndex--);
+            } else {
+                typingEl.textContent = current.substring(0, charIndex++);
+            }
+            let speed = isDeleting ? 30 : 80;
+            if (!isDeleting && charIndex === current.length + 1) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex < 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                speed = 400;
+            }
+            setTimeout(typeEffect, speed);
+        }
+        typeEffect();
+
+        // Scroll animations with Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // Animated counters
+        function animateCounters() {
+            document.querySelectorAll('.stat-number[data-count]').forEach(el => {
+                const target = parseInt(el.getAttribute('data-count'));
+                const duration = 2000;
+                const start = performance.now();
+                function update(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    let current = Math.floor(eased * target);
+                    if (target >= 1000000) {
+                        el.textContent = (current / 1000000).toFixed(1) + 'M';
+                    } else {
+                        el.textContent = current;
+                    }
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.querySelector('.hero-stats');
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // Floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 20) + 's';
+                particle.style.width = particle.style.height = (2 + Math.random() * 4) + 'px';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function closeNav() {
+            document.getElementById('navLinks').classList.remove('active');
+        }
+    </script>
 </body>
 
 </html>
