@@ -15,8 +15,8 @@ export default function AILab() {
 
   return (
     <section id="ai-lab" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-brand-surface/50" />
-      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute inset-0 bg-brand-surface/50 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
 
       {/* AI glow */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-secondary/5 rounded-full blur-[150px]" />

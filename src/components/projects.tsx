@@ -49,8 +49,8 @@ export default function Projects() {
 
   return (
     <section id="projects" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-brand-surface/50" />
-      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute inset-0 bg-brand-surface/50 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div

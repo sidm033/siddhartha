@@ -19,8 +19,8 @@ export default function About() {
 
   return (
     <section id="about" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-brand-bg" />
-      <div className="absolute inset-0 bg-grid opacity-30" />
+      <div className="absolute inset-0 bg-brand-bg pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
         <motion.div

@@ -18,9 +18,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-brand-surface/30" />
-      <div className="absolute inset-0 bg-grid opacity-20" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary/5 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-brand-surface/30 pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div
@@ -48,7 +48,9 @@ export default function Contact() {
         >
           <a
             href={`mailto:${siteConfig.email}`}
-            className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-brand-primary/20 transition-all duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-brand-primary/20 transition-all duration-500 cursor-pointer"
           >
             <Mail size={24} className="text-brand-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
             <p className="text-xs text-white/30 uppercase tracking-wider mb-1">Email</p>
@@ -56,7 +58,7 @@ export default function Contact() {
           </a>
           <a
             href={`tel:${siteConfig.phone}`}
-            className="group p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-brand-secondary/20 transition-all duration-500"
+            className="group block p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-brand-secondary/20 transition-all duration-500 cursor-pointer"
           >
             <Phone size={24} className="text-brand-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
             <p className="text-xs text-white/30 uppercase tracking-wider mb-1">Phone</p>
@@ -100,9 +102,11 @@ export default function Contact() {
         >
           <a
             href={`mailto:${siteConfig.email}?subject=Let's%20Work%20Together`}
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-brand-primary text-white font-bold text-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-brand-primary/25 hover:-translate-y-0.5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-brand-primary text-white font-bold text-lg rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-brand-primary/25 hover:-translate-y-0.5 cursor-pointer"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             <Mail size={20} className="relative z-10" />
             <span className="relative z-10">Send Me an Email</span>
           </a>

@@ -10,8 +10,8 @@ export default function Education() {
 
   return (
     <section id="education" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-brand-bg" />
-      <div className="absolute inset-0 bg-grid opacity-20" />
+      <div className="absolute inset-0 bg-brand-bg pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
 
       {/* Decorative glow for IIT section */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-primary/5 rounded-full blur-[150px]" />

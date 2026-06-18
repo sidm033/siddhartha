@@ -89,8 +89,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background layers */}
-      <div className="absolute inset-0 bg-brand-bg" />
-      <div className="absolute inset-0 bg-grid opacity-40" />
+      <div className="absolute inset-0 bg-brand-bg pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
       <ParticleField />
 
       {/* Gradient orbs */}
@@ -141,7 +141,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <motion.div variants={fadeUp} className="flex flex-wrap gap-4 mb-16">
           <a href="#projects" className="group relative inline-flex items-center gap-2 px-8 py-4 bg-brand-primary text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-brand-primary/25 hover:-translate-y-0.5">
-            <span className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-secondary opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             <ExternalLink size={18} className="relative z-10" />
             <span className="relative z-10">View Projects</span>
           </a>
